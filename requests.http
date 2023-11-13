@@ -1,0 +1,48 @@
+//********** Hoja para testear la API ******//
+// utilice la extensión REST CLIENT de VsCode para testearlos//
+
+### 
+//------------crear usuario------------
+POST http://localhost:9000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "",
+    "age": 1, 
+    "email":"Alan@gmail.com"
+}
+
+###
+//------------mostrar usuarios------------
+GET http://localhost:9000/api/users HTTP/1.1
+
+###
+//------------mostrar usuario por ID------------
+GET http://localhost:9000/api/users/id HTTP/1.1
+
+###
+//------------actualizar usuario------------
+PUT http://localhost:9000/api/users/id HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "",
+    "age": 0,
+    "email":"Alan2@gmail.com"
+}
+
+###
+//------------borrar usuario------------
+DELETE http://localhost:9000/api/users/id HTTP/1.1
+
+###
+//------------borrar todos los usuarios------------
+DELETE http://localhost:9000/api/users HTTP/1.1
+
+###
+//------------generar usuario random------------
+GET http://localhost:9000/api/randomUsers HTTP/1.1
+
+###
+//------------generar varios usuarios random------------
+GET http://localhost:9000/api/randomUsers/2 HTTP/1.1
